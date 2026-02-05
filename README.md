@@ -701,6 +701,56 @@ Caretaker  ---->  Memento  <----  Originator
                (created & restored by Originator)
 
 
+===================================================== Observer Pattern ==============================================
+
+Observer Pattern defines a one-to-many dependency between objects so that
+when one object changes state, all its dependents are notified automatically.
+
+YouTube Channel
+
+Subject → YouTube Channel
+Observers → Subscribers
+Event → New video uploaded
+
+Observer decouples state change from side effects.
+
+
+
+=========================================================== State Pattern ============================================ 
+
+“An object behaves differently depending on its internal state.”
+
+Problem statement:
+
+You have an object whose behavior changes based on its current state.
+
+Example:
+A Traffic Light
+A Vending Machine
+A Document Editor
+A Order lifecycle (Created → Paid → Shipped → Delivered)
+
+
+
+State Pattern allows an object to alter its behavior when its internal state changes. The object will appear to change its class.
+
+Context
+
+The main object (e.g., Order, VendingMachine)
+
+Holds a reference to a State
+
+State (interface)
+
+Declares behavior common to all states
+
+Concrete States
+
+Implement behavior for a specific state
+
+State Transitions
+
+States decide when & how to move to another state
 
 
 =============================================== Strategy Pattern ====================================================
@@ -715,11 +765,23 @@ What stays same → Context
 Strategy Pattern allows us to define multiple algorithms behind a common interface and switch them at runtime without modifying the client code. It helps eliminate conditional logic and follows Open–Closed Principle.
 
 
+Strategy (interface) – common contract
+
+Concrete Strategies – actual implementations
+
+Context – uses a strategy, doesn’t know the details
 
 
 
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+
+
+“What is changing?”
+“What might grow in the future?”
+“What will make this code ugly in 6 months?”
 
 
 TYPE_SCRIPT : 
