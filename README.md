@@ -784,6 +784,57 @@ Context – uses a strategy, doesn’t know the details
 “What will make this code ugly in 6 months?”
 
 
+
+=====
+
+
 TYPE_SCRIPT : 
     implements : In TypeScript, the implements keyword is used by a class to promise that it follows a specific contract defined by an interface.
     TS private ≠ JS #private
+
+
+
+
+
+1️⃣ Who owns this data?
+2️⃣ Who changes this data?
+3️⃣ Who is responsible for this behavior?
+
+
+
+What are the functional requirements?
+Any constraints?
+Fixed or configurable?
+What assumptions can I make?
+
+
+
+✅ Step 2: Identify Core Entities (Nouns Only)
+
+Write only nouns from the problem.
+
+Example (Parking Lot):
+
+ParkingLot
+Floor
+ParkingSpot
+Vehicle
+Ticket
+Payment
+
+✅ Step 3: Define Relationships
+
+Ask:
+
+Who contains whom?
+
+Who owns whom?
+
+Example:
+
+ParkingLot → Floors
+Floor → Spots
+Spot → Vehicle
+Ticket → Vehicle + Spot
+Still no patterns.
+Just structure.
