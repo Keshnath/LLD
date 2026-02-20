@@ -838,3 +838,56 @@ Spot → Vehicle
 Ticket → Vehicle + Spot
 Still no patterns.
 Just structure.
+
+✅ Step 4: Assign Responsibilities (VERY IMPORTANT)
+
+For each entity, ask:
+
+Object	What does it own?	What does it do?
+
+Example:
+
+Ticket:
+
+Owns entryTime, exitTime
+
+Calculates duration
+
+Spot:
+
+Owns occupancy
+
+Can park / unpark
+
+ParkingLot:
+
+Orchestrates entry & exit
+
+This step reduces 70% confusion.
+
+Because responsibility becomes clear.
+
+
+Step 5: Identify Variation Points
+
+Ask:
+
+What may change in future?
+
+Examples:
+
+Pricing logic
+
+Spot allocation logic
+
+Payment method
+
+Only NOW think about abstraction.
+
+If something may change → extract interface.
+
+If not → keep simple.
+
+
+
+Design from top to low and write code from low to high ---------------------
