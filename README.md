@@ -891,3 +891,30 @@ If not → keep simple.
 
 
 Design from top to low and write code from low to high ---------------------
+
+
+
+
+Entity Name:
+  1. What it KNOWS (state/data)
+  2. What it DOES (behavior)
+  3. Why it owns this responsibility
+
+
+  Whenever you see:
+
+date
+
+timestamp
+
+status history
+
+return date
+
+fine
+
+renew count
+
+You are probably dealing with a relationship entity, not a core entity.
+
+“Who owns the data required to validate the action?”
