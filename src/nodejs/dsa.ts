@@ -150,6 +150,8 @@ The second path is (0,0) => (1,0) => (1,1) => (2,1) => (3,1) => (3,2) => (3,3).
 
 */
 
+/*
+
 let directions: string[][] = [];
 let ratInMaze = (
   grid: number[][],
@@ -188,3 +190,65 @@ let grid: number[][] = [
 ];
 ratInMaze(grid, 0, 0, 4, []);
 console.log(directions);
+
+*/
+
+/*
+Given a string s and a dictionary of strings wordDict, return true if s can be segmented into a space-separated sequence of one or more dictionary words otherwise return false.
+Note : The same word in dictionary can be used multiple times in segmentation.
+
+Example 1
+Input : 
+
+Output : true
+Explanation : Return true because "takeuforward" can be segmented as "take" , "u" , "forward".
+
+Example 2
+Input : s = "applepineapple" , wordDict = ["apple"]
+
+Output : false
+Explanation : Return false because "applepineapple" can be segmented as "apple" , "pine" , "apple" but here we do not have "pine" word in dictionary.
+
+*/
+
+// let isSegment = (
+//   word: string,
+//   dictionary: string[],
+//   ind: number,
+// ): boolean => {
+//   if (ind === word.length) return true;
+//   for(let i = 0 ; i < word.length ; i++){
+//     let sub = word.slice(ind , i + 1)
+//     if(dictionary.includes(sub)){
+//       if(isSegment(word , dictionary , i+1)) return true
+//     }
+//   }
+//   return false
+
+// };
+
+// let s = "applepineapple";
+// let wordDict = ["apple" ,"pine"];
+
+// console.log(isSegment(s, wordDict, 0));
+
+
+/*
+Create a program that fills in the blank cells in a Sudoku puzzle to solve it.
+Every sudoku solution needs to follow to these guidelines:
+
+1) In every row, the numbers 1 through 9 must appear exactly once.
+2) In every column, the numbers 1 through 9 must appear exactly once.
+3) In each of the grid's nine 3x3 sub-boxes, the numbers 1 through 9 must appear exactly once.
+Empty cells are indicated by the '.' character.
+
+
+Input : board = [ ["5", "3", ".", ".", "7", ".", ".", ".", "."] , ["6", ".", ".", "1", "9", "5", ".", ".", "."] , [".", "9", "8", ".", ".", ".", ".", "6", "."] , ["8", ".", ".", ".", "6", ".", ".", ".", "3"] , ["4", ".", ".", "8", ".", "3", ".", ".", "1"] , ["7", ".", ".", ".", "2", ".", ".", ".", "6"] , [".", "6", ".", ".", ".", ".", "2", "8", "."] , [".", ".", ".", "4", "1", "9", ".", ".", "5"] , [".", ".", ".", ".", "8", ".", ".", "7", "9"] ]
+ [ [ ".", ".", ".", ".", ".", ".", "7", ".", ".", ], [ "7", ".", "5", ".", ".", ".", "9", ".", ".", ], [ ".", ".", ".", "9", "7", "5", "4", "3", "1", ], [ "9", ".", ".", ".", "4", "1", ".", ".", "7", ], [ ".", "5", ".", "8", ".", "7", "6", "4", ".", ], [ ".", "7", ".", ".", "2", ".", ".", ".", ".", ], [ ".", "4", ".", ".", ".", ".", ".", "6", "9", ], [ "1", "6", ".", "4", "3", ".", ".", ".", ".", ], [ ".", ".", ".", ".", "6", "2", "3", ".", "4", ] ]
+*/
+
+
+
+
+
+
