@@ -3,7 +3,12 @@ import { CreateUserDto } from "./dto/create-user.dto";
 import { UpdateUserDto } from "./dto/update-user.dto";
 
 export class UserService {
-  constructor(private readonly repo: UserRepository) {}
+  private readonly repo : UserRepository
+  constructor(repo: UserRepository) {
+    this.repo = repo
+  }
+
+  
 
   createUser(data: CreateUserDto) {
     return this.repo.create(data);

@@ -1,7 +1,69 @@
+// var letterCombinations = function(digits: string): string[] {
+//     if (digits.length === 0) return [];
+
+//     let map = new Map<string, string>([
+//         ["2", "abc"],
+//         ["3", "def"],
+//         ["4", "ghi"],
+//         ["5", "jkl"],
+//         ["6", "mno"],
+//         ["7", "pqrs"],
+//         ["8", "tuv"],
+//         ["9", "wxyz"]
+//     ]);
+
+//     let ans: string[] = [];
+
+//     const fn = (index: number, path: string) => {
+//         // base case
+//         if (index === digits.length) {
+//             ans.push(path);
+//             return;
+//         }
+
+//         let letters = map.get(digits[index])!;
+
+//         for (let ch of letters) {
+//             fn(index + 1, path + ch);
+//         }
+//     };
+
+//     fn(0, "");
+//     return ans;
+// };
+
+// console.log(letterCombinations("2"));
+
+// class Person {
+//   protected name: string;
+
+//   constructor(name: string) {
+//     this.name = name;
+//   }
+// }
+
+// class Employee extends Person {
+//   getName() {
+//     return this.name; // accessible because protected
+//   }
+// }
+
+// const emp = new Employee("John");
+// console.log(emp.getName());
+
+
 /*
+ABC
 Given a string s partition string s such that every substring of partition is palindrome. Return all possible palindrome partition of string s.
 
-Example 1
+  abc
+  acb 
+  bac
+  bca
+  cab
+  cba
+  a -> a
+  ab -> ab , ba 
 
 Input : s = "aabaa"
 
