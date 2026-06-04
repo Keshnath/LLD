@@ -1,55 +1,102 @@
+// var letterCombinations = function(digits: string): string[] {
+//     if (digits.length === 0) return [];
+
+//     let map = new Map<string, string>([
+//         ["2", "abc"],
+//         ["3", "def"],
+//         ["4", "ghi"],
+//         ["5", "jkl"],
+//         ["6", "mno"],
+//         ["7", "pqrs"],
+//         ["8", "tuv"],
+//         ["9", "wxyz"]
+//     ]);
+
+//     let ans: string[] = [];
+
+//     const fn = (index: number, path: string) => {
+//         // base case
+//         if (index === digits.length) {
+//             ans.push(path);
+//             return;
+//         }
+
+//         let letters = map.get(digits[index])!;
+
+//         for (let ch of letters) {
+//             fn(index + 1, path + ch);
+//         }
+//     };
+
+//     fn(0, "");
+//     return ans;
+// };
+
+// console.log(letterCombinations("2"));
+
+// class Person {
+//   protected name: string;
+
+//   constructor(name: string) {
+//     this.name = name;
+//   }
+// }
+
+// class Employee extends Person {
+//   getName() {
+//     return this.name; // accessible because protected
+//   }
+// }
+
+// const emp = new Employee("John");
+// console.log(emp.getName());
+
+
 /*
-Given an array nums of n integers. Return array of sum of all subsets of the array nums.
-Output can be returned in any order.
+ABC
 
-Example 1
+  abc
+  acb 
+  bac
+  bca
+  cab
+  cba
+  a -> a
+  ab -> ab , ba 
 
-Input : nums = [2, 3]
-
-Output : [0, 2, 3, 5]
-
-Explanation :
-
-When no elements is taken then Sum = 0.
-
-When only 2 is taken then Sum = 2.
-
-When only 3 is taken then Sum = 3.
-
-When element 2 and 3 are taken then sum = 2+3 = 5.
-
-Example 2
-
-Input : nums = [5, 2, 1]
-
-Output : [0, 1, 2, 3, 5, 6, 7, 8]
-
-Explanation :
-
-When no elements is taken then Sum = 0.
-
-When only 5 is taken then Sum = 5.
-
-When only 2 is taken then Sum = 2.
-
-When only 1 is taken then Sum = 1.
-
-When element 2 and 1 are taken then sum = 2+1 = 3.
-
-Now your turn!
 
 */
 
-let sumArr: number[] = [];
+// let comb: string[] = [];
 
-let subset = (start: number, arr: number[], s: number): void => {
-  if (start === arr.length) {
-    sumArr.push(s);
-    return;
-  }
-  subset(start + 1, arr, s + arr[start]);
-  subset(start + 1, arr, s);
-};
+// let combination = (s: string[], ind: number) => {
+//   if (ind === s.length) {
+//     comb.push(s.join(""));
+//     return;
+//   }
 
-subset(0, [5, 2, 1], 0);
-console.log(sumArr, "<<<");
+//   for (let i = ind; i < s.length; i++) {
+//     // choose
+//     [s[i], s[ind]] = [s[ind], s[i]];
+
+//     // explore
+//     combination(s, ind + 1);
+
+//     // backtrack (VERY IMPORTANT)
+//     [s[i], s[ind]] = [s[ind], s[i]];
+//   }
+// };
+
+// combination(["a", "b", "c"], 0);
+// console.log(comb);
+
+class A {
+  protected value = 10;
+}
+
+class B extends A {
+  value = 20;
+}
+
+const obwj = new B();
+console.log(obwj.value);
